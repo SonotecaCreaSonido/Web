@@ -1,0 +1,257 @@
+/* Fuente general */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f7e8ff;
+}
+
+/* Header */
+header {
+  background-color: rgba(53, 21, 93);
+  height: 130px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logo img {
+  height: 230px;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px dotted transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #512f82;
+  border-color: #512f82;
+}
+
+/* Contenedor de secciones */
+#pdf-pages {
+  margin-top: 2rem;
+}
+
+/* Secciones tipo página del PDF */
+.pdf-section {
+  /* Quitamos min-height para no forzar altura */
+  padding: 3rem 10vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* contenido arriba */
+  background: #f7e8ff;
+  color: #35155d;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Animación */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Primera sección */
+.first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding-top: 10rem; /* menos padding arriba para subir */
+  margin-top: 0;
+  margin-bottom: 1.5rem; /* espacio entre secciones */
+  animation: fadeUp 1.2s ease-out both;
+}
+
+.first-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.first-section p {
+  font-size: 1.3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Sección 2 (texto izquierda, imagen derecha) */
+.section-dos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 8vw 2rem; /* menos padding arriba para subir */
+  max-width: 1200px;
+  margin: 0 auto; /* centrado horizontal */
+  margin-top: 15rem;
+  box-sizing: border-box;
+}
+
+.contenido-izquierda,
+.imagen-derecha {
+  flex: 1;
+}
+
+.contenido-izquierda {
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.imagen-derecha {
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-derecha img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #35155d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.pdf-section.section-tres {
+  display: flex;
+  flex-direction: row; /* fila normal, imagen a la izquierda, texto a la derecha */
+  justify-content: flex-start; /* alinea al inicio */
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 8vw;
+  max-width: 1200px;
+  margin: 3rem auto;
+  box-sizing: border-box;
+  border: 2px solid transparent; /* para debug, puedes quitar */
+}
+
+.pdf-section.section-tres .imagen-izquierda,
+.pdf-section.section-tres .contenido-derecha {
+  flex: 1;
+}
+
+.imagen-izquierda {
+  display: flex;
+  justify-content: flex-start; /* fuerza a la izquierda */
+}
+
+.imagen-izquierda img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid #35155d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenido-derecha {
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.section-cuatro {
+  background-image: url('../imagenes/intrumento\ 3.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 0; /* Quitamos padding general */
+}
+
+.section-cuatro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Imagen más opaca */
+  z-index: 1;
+}
+
+.section-cuatro p {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  max-width: 1000px; /* Limita el ancho del texto */
+  margin: 0 auto;     /* Centra horizontalmente */
+  padding: 0 1rem;    /* Pequeño margen interno */
+  line-height: 1.8;
+}
+
+.section-cinco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse; /* Esto invierte la posición */
+}
+
+.section-cinco .imagen-izquierda img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 0; /* Quitar borde */
+}
+
+.section-cinco .contenido-derecha {
+  flex: 1;
+  min-width: 280px;
+}
+
+.section-cinco .contenido-derecha p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
