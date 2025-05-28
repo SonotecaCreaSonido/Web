@@ -82,7 +82,7 @@ nav a.active {
 }
 
 .reflexion-sonora {
-  background-image: url("../imagenes/fondo_sonoteca_3.png"); /* Asegúrate de que esta ruta sea correcta */
+  background-image: url("../imagenes/reflexion.jpg"); /* Asegúrate de que esta ruta sea correcta */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -114,5 +114,71 @@ nav a.active {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #222;
+  font-weight: 500;
+}
+
+.legado-sonoro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.contenido-legado {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.imagen-legado img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 400px;
+}
+
+.texto-legado {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #222;
+  max-width: 600px;
+}
+
+.collage-sonoro {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../imagenes/implementacion.png"); /* Asegúrate que el nombre del archivo coincida */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.collage-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+  z-index: 0;
+}
+
+.collage-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 2;
+  color: #222;
+  padding: 2rem;
   font-weight: 500;
 }

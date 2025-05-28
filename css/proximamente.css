@@ -50,3 +50,78 @@ nav a.active {
   background-color: #512f82;
   border-color: #512f82;
 }
+
+.siguientes-fases {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 300;
+  color: #111;
+}
+
+.titulo-fase {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #35155d;
+}
+
+.siguientes-fases p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.fase-contenido {
+  max-width: 1100px;
+  margin: 4rem auto;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.fase-contenido .titulo-fase {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #35155d;
+}
+
+.contenido-fase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: left;
+}
+
+.texto-fase {
+  flex: 1;
+  min-width: 300px;
+}
+
+.texto-fase p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.imagen-fase {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imagen-fase img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.fila-invertida {
+  flex-direction: row-reverse;
+}
+
