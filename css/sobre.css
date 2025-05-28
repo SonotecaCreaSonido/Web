@@ -1,0 +1,118 @@
+/* Fuente general */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f7e8ff;
+}
+
+/* Header */
+header {
+  background-color: rgba(53, 21, 93);
+  height: 130px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logo img {
+  height: 230px;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border: 2px dotted transparent;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #512f82;
+  border-color: #512f82;
+}
+
+.perfil-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.perfil-texto {
+  flex: 1 1 500px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.perfil-imagen img {
+  max-width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contacto {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.reflexion-sonora {
+  background-image: url("../imagenes/fondo_sonoteca_3.png"); /* Asegúrate de que esta ruta sea correcta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;       /* Ocupa todo el ancho de la ventana */
+  height: 100vh;      /* Ocupa toda la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.reflexion-sonora::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+  z-index: 0;
+}
+
+.reflexion-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #222;
+  font-weight: 500;
+}
